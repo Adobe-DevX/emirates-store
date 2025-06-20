@@ -10,10 +10,10 @@
       "/content/emirates-store/placeholders:/placeholders.json",
       "/content/emirates-store/products/recommended-products:/products/recommended-products.json",
       "/content/emirates-store/enrichment/enrichment:/enrichment/enrichment.json",
-      "/content/dam/emirates-store/images/products/:/images/products/"
+      "/content/dam/citisignal/images/products/:/images/products/"
     ],
     "includes": [
       "/content/emirates-store",
-      "/content/dam/emirates-store/images/products/"
+      "/content/dam/citisignal/images/products/"
     ]
 }
