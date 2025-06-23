@@ -593,7 +593,11 @@ header .header > .default-content-wrapper p:last-of-type img {
   }
   /* custom login button */
   header nav .custom-login .default-content-wrapper a{
-    color:aqua;
+    position: absolute;
+    top: 44px;
+    margin-left: 80em;
+    margin-bottom: 74em;
+    padding-bottom: 10px;
 }
 
 .skywards-modal {
