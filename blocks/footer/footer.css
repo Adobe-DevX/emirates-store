@@ -74,6 +74,12 @@ footer .wrapper .section.site-links .default-content-wrapper ol li:first-of-type
   padding-left: 0;
 }
 
+footer .wrapper .section.rights-reserved {
+  flex: none;
+  width: 100%;
+  margin-top: 2rem;
+}
+
 /* Media Queries */
 @media (width <= 900px) {
   footer {
@@ -119,5 +125,9 @@ footer .wrapper .section.site-links .default-content-wrapper ol li:first-of-type
 
   footer .wrapper .section.social-media img {
     padding: 0.5em 0.5em 0.2em;
+  }
+  
+  footer .wrapper .section.rights-reserved {
+    margin-top: 1rem;
   }
 }

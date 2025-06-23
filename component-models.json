@@ -198,6 +198,10 @@
                 "value": "site-links"
               },
               {
+                "name": "Rights Reserved",
+                "value": "rights-reserved"
+              },
+              {
                 "name": "Social Media",
                 "value": "social-media"
               },
