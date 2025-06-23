@@ -286,8 +286,45 @@ export default async function decorate(block) {
   const topNav = navWrapper.querySelector('.nav-tools .default-content-wrapper');
   block.prepend(topNav);
   block.append(navWrapper);
+
+  //custom login button
   const customLogin = navWrapper.querySelector('.custom-login .default-content-wrapper a');
-  customLogin.href = 'www.google.com';
+  // Create and inject modal HTML
+  const modalHTML = `
+    <div id="skywardsModal" class="skywards-modal">
+      <div class="skywards-modal-content">
+        <span class="skywards-close">&times;</span>
+        <h2>Log in to Emirates Skywards</h2>
+        <p>Log in to earn or spend Skywards Miles on your shopping at the Emirates Official Store.</p>
+        <button class="skywards-btn login-btn">LOG IN</button>
+        <div class="join-now-section">
+          <p>Not a member? It's free to join</p>
+          <button class="skywards-btn join-btn">JOIN NOW</button>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Append to body
+  document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+  const modal = document.getElementById("skywardsModal");
+  const closeBtn = modal.querySelector(".skywards-close");
+
+  customLogin.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal.style.display = "block";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
 
   addAnimation();
   setActiveTab();
