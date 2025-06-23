@@ -416,7 +416,7 @@ header nav .nav-tools button.nav-cart-button[data-count]::after {
 
 header nav .nav-tools button.nav-search-button {
   font-size: 0;
-  background-image: url('/icons/search.svg');
+  background-image: url('/icons/search-button-svgrepo-com.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
