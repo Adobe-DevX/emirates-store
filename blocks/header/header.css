@@ -591,4 +591,7 @@ header .header > .default-content-wrapper p:last-of-type img {
     left: unset;
     right: 0;
   }
+  header nav .custom-login .default-content-wrapper a{
+    color:aqua;
+}
 }

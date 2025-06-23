@@ -286,6 +286,8 @@ export default async function decorate(block) {
   const topNav = navWrapper.querySelector('.nav-tools .default-content-wrapper');
   block.prepend(topNav);
   block.append(navWrapper);
+  const customLogin = navWrapper.querySelector('.custom-login .default-content-wrapper a');
+  customLogin.href = 'www.google.com';
 
   addAnimation();
   setActiveTab();
