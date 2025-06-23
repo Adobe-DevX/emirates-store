@@ -1,11 +1,13 @@
 /* stylelint-disable */
 header .header-nav-wrapper {
-  background-color: var(--background-color);
+  background-color: #333;
   width: 100%;
+  height: 5%;
   z-index: 20;
   position: fixed;
   top: 40px;
   padding: 2em 0;
+  padding-top: 2px;
   border-bottom: 1px solid var(--color-neutral-400);
 }
 
@@ -212,11 +214,12 @@ header nav .nav-sections ul {
   padding-left: 0;
   font: var(--type-body-1-default-font);
   letter-spacing: var(--type-body-1-default-letter-spacing);
-  gap: 1em;
+  gap: 2.5em;
 }
 
 header nav .nav-sections ul > li {
-  font-weight: 700;
+  font-weight: 1000;
+  cursor: pointer;
 }
 
 @media (width <=  1200px) {
@@ -594,8 +597,8 @@ header .header > .default-content-wrapper p:last-of-type img {
   /* custom login button */
   header nav .custom-login .default-content-wrapper a{
     position: absolute;
-    top: 44px;
-    margin-left: 80em;
+    top: 1em;
+    margin-left: 81em;
     margin-bottom: 74em;
     padding-bottom: 10px;
 }
