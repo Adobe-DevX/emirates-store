@@ -32,6 +32,3 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
-.individual-card div{
-  box-shadow:0 4px 10px rgba(128, 128, 128, 0.3);
-}
