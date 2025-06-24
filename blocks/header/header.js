@@ -287,6 +287,18 @@ export default async function decorate(block) {
   block.prepend(topNav);
   block.append(navWrapper);
 
+  //remove unnecessary text nodes
+  // Check and remove text nodes that are only whitespace or 'null'
+for (let node of Array.from(block.childNodes)) {
+  if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() === 'null') {
+    block.removeChild(node);
+  }
+}
+
+  //adding marqueeee
+  block.firstElementChild.classList.add('marquee');
+  
+
   //custom login button
   const customLogin = navWrapper.querySelector('.custom-login .default-content-wrapper a');
   // Create and inject modal HTML
@@ -326,6 +338,7 @@ export default async function decorate(block) {
     }
   });
 
+
   addAnimation();
-  // setActiveTab();
+  setActiveTab();
 }
