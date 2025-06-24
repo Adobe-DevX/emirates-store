@@ -54,8 +54,13 @@
 }
 
 .carousel .carousel-slide .carousel-slide-content a:any-link.button {
-  background: var(--secondary-color);
-  color: var(--primary-color);
+  background: red;
+  color: white;
+  border-radius: 3px;
+}
+.carousel .carousel-slide .carousel-slide-content a:any-link.button:hover{
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  text-decoration: none;
 }
 
 .carousel .carousel-slide.bg-light .carousel-slide-content a:any-link.button {
