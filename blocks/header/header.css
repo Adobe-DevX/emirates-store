@@ -428,7 +428,7 @@ header nav .nav-tools button.nav-search-button {
 
 header nav .nav-tools button.nav-search-button:hover,
 header nav .nav-tools button.nav-cart-button:hover {
-  background-color: var(--color-neutral-200);
+  background-color: dimgrey;
   cursor: pointer;
 }
 
