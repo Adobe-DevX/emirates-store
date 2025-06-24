@@ -602,6 +602,10 @@ header .header > .default-content-wrapper p:last-of-type img {
     margin-bottom: 74em;
     padding-bottom: 10px;
 }
+header nav .custom-login .default-content-wrapper a:hover{
+  text-decoration: none;
+  color:dimgrey;
+}
 
 .skywards-modal {
   display: none;
