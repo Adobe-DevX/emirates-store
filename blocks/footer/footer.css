@@ -261,6 +261,7 @@ footer .wrapper .section.site-links .default-content-wrapper ol li:first-of-type
     color: gainsboro;
     font-size: 14px;
     line-height: 18px;
+    height: 50px;
   }
   .span8{
     display: flex;
