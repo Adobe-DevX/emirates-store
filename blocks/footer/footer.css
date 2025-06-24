@@ -209,13 +209,13 @@ footer .wrapper .section.site-links .default-content-wrapper ol li:first-of-type
   .links{
     list-style: none;
   }
-  .links li a{
+  .links li a , .links a{
     font-size: larger;
     color: #797d7b;
     text-decoration: none;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
-  .links li a:hover{
+  .links li a:hover, .links a:hover{
     color: #333;
     text-decoration: underline;
   }
