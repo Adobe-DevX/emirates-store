@@ -262,3 +262,14 @@ footer .wrapper .section.site-links .default-content-wrapper ol li:first-of-type
     font-size: 12px;
     line-height: 18px;
   }
+  .span8{
+    display: flex;
+    justify-content: center;
+  }
+  .span8 a{
+    color: #797d7b;
+    font-size: small;
+  }
+  .span8 a:hover{
+    text-decoration: none;
+  }
