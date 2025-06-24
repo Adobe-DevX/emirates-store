@@ -271,5 +271,6 @@ footer .wrapper .section.site-links .default-content-wrapper ol li:first-of-type
     font-size: small;
   }
   .span8 a:hover{
-    text-decoration: none;
+    text-decoration: none !important;
+    color: white !important;
   }
