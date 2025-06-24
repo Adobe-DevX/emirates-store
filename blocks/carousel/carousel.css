@@ -94,7 +94,7 @@
   z-index: 1;
   padding: 1rem;
   margin: 1.5rem 3rem;
-  background-color: rgba(0 0 0 / 50%);
+  /* background-color: rgba(0 0 0 / 50%); */
   position: relative;
   width: var(--slide-content-width, auto);
   border-radius: var(--border-radius);
@@ -108,11 +108,14 @@
 }
 
 .carousel .carousel-slide-indicator {
-  width: 10rem;
-  height: 0.3rem;
-  background-color: rgba(0 0 0 / 25%);
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: whitesmoke;
   display: flex;
   border-radius: 1rem;
+}
+.carousel .carousel-slide-indicator:hover{
+  background-color: grey;
 }
 
 .carousel .carousel-slide-indicator button {
@@ -222,9 +225,13 @@ nav:has(.carousel-slide-indicators) {
     --slide-content-width: 50%;
 
     margin: 2.5rem 5rem;
+    margin-left: 22rem;
   }
 
   .carousel .carousel-slide .carousel-slide-content[data-align='justify'] {
     --slide-content-width: auto;
+  }
+  #carousel-1 > nav > ol{
+    gap: 1.5rem;
   }
 }
