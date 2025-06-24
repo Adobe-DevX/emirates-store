@@ -237,8 +237,8 @@ footer .wrapper .section.site-links .default-content-wrapper ol li:first-of-type
   }
   .google-term a{
     color:red;
+    text-decoration: underline;
   }
   .google-term a:hover{
-    text-decoration: underline;
     color:black;
   }
