@@ -239,4 +239,11 @@ nav:has(.carousel-slide-indicators) {
   #carousel-1 > nav > ol{
     gap: 1.5rem;
   }
+  .carousel-slide-content > p:nth-child(1){
+    font-family: -webkit-body;
+    font-size: xxx-large;
+    font-weight: 500;
+    line-height: 1.0;
+    margin-bottom: 40px;
+  }
 }
