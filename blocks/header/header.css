@@ -674,5 +674,9 @@ header .header-nav-wrapper{
 header nav .nav-sections .default-content-wrapper > ul > li:hover{
   color:dimgrey;
 }
-
+.section.brand-logo.nav-brand > div > p > picture > img{
+  z-index: 10;
+  position: relative;
+  top: 7rem;
+}
 }
