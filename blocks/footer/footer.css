@@ -171,6 +171,7 @@ footer .wrapper .section.site-links .default-content-wrapper ol li:first-of-type
     box-sizing: inherit;
     margin-left: -30px;
     display: flex;
+    gap:70px;
 
   }
   .custom-footer-wrapper > div > div > div:nth-child(1){
@@ -218,4 +219,7 @@ footer .wrapper .section.site-links .default-content-wrapper ol li:first-of-type
   .links li a:hover, .links a:hover{
     color: #333;
     text-decoration: underline;
+  }
+  .span4{
+    padding-left: 100px;
   }
