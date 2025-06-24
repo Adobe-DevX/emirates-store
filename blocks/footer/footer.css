@@ -170,6 +170,8 @@ footer .wrapper .section.site-links .default-content-wrapper ol li:first-of-type
     padding: 0;
     box-sizing: inherit;
     margin-left: -30px;
+    display: flex;
+
   }
   .custom-footer-wrapper > div > div > div:nth-child(1){
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -187,6 +189,9 @@ footer .wrapper .section.site-links .default-content-wrapper ol li:first-of-type
     min-height: 1px;
     margin-left: 25px;
     width: 170px;
+  }
+  .span2 h6{
+    margin-left: 34px;
   }
   
 
