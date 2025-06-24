@@ -662,4 +662,11 @@ header .header > .default-content-wrapper p:last-of-type img {
   color: #fff;
 }
 
+header .header-nav-wrapper{
+  color: white;
+}
+header nav .nav-sections .default-content-wrapper > ul > li:hover{
+  color:dimgrey;
+}
+
 }
