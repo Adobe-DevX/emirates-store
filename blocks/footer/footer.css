@@ -193,5 +193,17 @@ footer .wrapper .section.site-links .default-content-wrapper ol li:first-of-type
   .span2 h6{
     margin-left: 34px;
   }
-  
+  .categories{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-text-size-adjust: 100%;
+    color-scheme: light;
+    line-height: 1.1;
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+    color: #797d7b;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
 
