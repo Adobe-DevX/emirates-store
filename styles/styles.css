@@ -910,3 +910,6 @@ main .section.author .content-wrapper p:nth-child(2) {
 .dropin-design .dropin-cart-item__sku {
   display: none;
 }
+main .section.carousel-container{
+  background-color: #f6f6f6;
+}
