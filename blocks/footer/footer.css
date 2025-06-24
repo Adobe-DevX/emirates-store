@@ -242,3 +242,9 @@ footer .wrapper .section.site-links .default-content-wrapper ol li:first-of-type
   .google-term a:hover{
     color:black;
   }
+  .social ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0px;
+  }
