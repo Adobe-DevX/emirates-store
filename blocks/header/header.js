@@ -327,5 +327,5 @@ export default async function decorate(block) {
   });
 
   addAnimation();
-  setActiveTab();
+  // setActiveTab();
 }
