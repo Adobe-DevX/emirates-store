@@ -16,7 +16,12 @@ export default function decorate(block) {
     });
   });
   //adding classname to columns inside columns block
-  block.querySelectorAll('div').forEach((child, index) => {
-    child.classList.add('individual-card');
+  Array.from(block.children).forEach(child => {
+    if (
+      child.tagName === 'DIV' &&
+      !child.className.trim() // no class at all
+    ) {
+      child.classList.add('individual-card');
+    }
   });
 }
