@@ -44,9 +44,9 @@
     order: unset;
   }
 }
-.individual-card{
+.individual-card div{
   box-shadow:0 4px 10px rgba(128, 128, 128, 0.3);
 }
-.individual-card:hover{
+.individual-card div:hover{
   box-shadow:0 4px 10px rgba(128, 128, 128, 0.5);
 }
