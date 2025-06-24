@@ -227,4 +227,7 @@ nav:has(.carousel-slide-indicators) {
   .carousel .carousel-slide .carousel-slide-content[data-align='justify'] {
     --slide-content-width: auto;
   }
+  .carousel-container{
+    background-color: #f6f6f6;
+  }
 }
