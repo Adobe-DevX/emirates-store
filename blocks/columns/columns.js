@@ -24,4 +24,9 @@ export default function decorate(block) {
       child.classList.add('individual-card');
     }
   });
+  document.querySelectorAll('.individual-card div').forEach(card => {
+    if (card.innerHTML.trim() === '') {
+      card.style.boxShadow = 'none';
+    }
+  });
 }
