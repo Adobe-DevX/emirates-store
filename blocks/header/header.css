@@ -1,11 +1,14 @@
 /* stylelint-disable */
 header .header-nav-wrapper {
-  background-color: var(--background-color);
+  background-color: #333;
   width: 100%;
-  z-index: 20;
-  position: fixed;
+  height: 5%;
+  /* z-index: 20;
+  position: fixed; */
   top: 40px;
-  padding: 2em 0;
+  margin-top: 2px;
+  padding: 0;
+  padding-top: 2px;
   border-bottom: 1px solid var(--color-neutral-400);
 }
 
@@ -212,11 +215,12 @@ header nav .nav-sections ul {
   padding-left: 0;
   font: var(--type-body-1-default-font);
   letter-spacing: var(--type-body-1-default-letter-spacing);
-  gap: 1em;
+  gap: 2.5em;
 }
 
 header nav .nav-sections ul > li {
-  font-weight: 700;
+  font-weight: 1000;
+  cursor: pointer;
 }
 
 @media (width <=  1200px) {
@@ -413,7 +417,7 @@ header nav .nav-tools button.nav-cart-button[data-count]::after {
 
 header nav .nav-tools button.nav-search-button {
   font-size: 0;
-  background-image: url('/icons/search.svg');
+  background-image: url('/icons/search-button-svgrepo-com.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent;
@@ -425,7 +429,7 @@ header nav .nav-tools button.nav-search-button {
 
 header nav .nav-tools button.nav-search-button:hover,
 header nav .nav-tools button.nav-cart-button:hover {
-  background-color: var(--color-neutral-200);
+  background-color: dimgrey;
   cursor: pointer;
 }
 
@@ -591,4 +595,88 @@ header .header > .default-content-wrapper p:last-of-type img {
     left: unset;
     right: 0;
   }
+  /* custom login button */
+  header nav .custom-login .default-content-wrapper a{
+    position: absolute;
+    top: 3.3em;
+    margin-left: 80em;
+    margin-bottom: 74em;
+    padding-bottom: 10px;
+}
+header nav .custom-login .default-content-wrapper a:hover{
+  text-decoration: none;
+  color:dimgrey;
+}
+
+.skywards-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  font-family: Arial, sans-serif;
+}
+
+.skywards-modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+  text-align: center;
+}
+
+.skywards-close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.skywards-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-btn {
+  background-color: #d7192d;
+  color: #fff;
+}
+
+.join-now-section {
+  margin-top: 20px;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.join-btn {
+  background-color: #444;
+  color: #fff;
+}
+
+header .header-nav-wrapper{
+  color: white;
+
+}
+header nav .nav-sections .default-content-wrapper > ul > li:hover{
+  color:dimgrey;
+}
+.section.brand-logo.nav-brand > div > p > picture > img{
+  z-index: 10;
+  position: relative;
+  top: 7rem;
+}
 }

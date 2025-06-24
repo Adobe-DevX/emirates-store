@@ -1,4 +1,4 @@
-/* Base Styles */
+/* Base Styles
 footer {
   padding: 2rem 32px;
   background-color: var(--color-black-100);
@@ -75,7 +75,7 @@ footer .wrapper .section.site-links .default-content-wrapper ol li:first-of-type
 }
 
 /* Media Queries */
-@media (width <= 900px) {
+/* @media (width <= 900px) {
   footer {
     padding: 4rem 7rem;
   }
@@ -119,5 +119,162 @@ footer .wrapper .section.site-links .default-content-wrapper ol li:first-of-type
 
   footer .wrapper .section.social-media img {
     padding: 0.5em 0.5em 0.2em;
+  } */ 
+
+
+  /* custom footer */
+  .custom-footer-wrapper{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-text-size-adjust: 100%;
+    color-scheme: light;
+    line-height: 1.1;
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    box-sizing: inherit;
+    background: #333;
+    position: relative;
+    z-index: 50;
+    background-color: #ffffff;
+    padding: 20px 0;
+    font-size: 13px;
+    color: #797d7b;
+    box-shadow: 0 -1px 2px rgba(71, 73, 72, 0.19999999999999996);
   }
-}
+  .custom-footer-wrapper .container{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-text-size-adjust: 100%;
+    color-scheme: light;
+    line-height: 1.1;
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+    color: #797d7b;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1170px;
+  }
+  .custom-footer-wrapper .container .row{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-text-size-adjust: 100%;
+    color-scheme: light;
+    line-height: 1.1;
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+    color: #797d7b;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    margin-left: -30px;
+    display: flex;
+    gap:70px;
+
+  }
+  .custom-footer-wrapper > div > div > div:nth-child(1){
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-text-size-adjust: 100%;
+    color-scheme: light;
+    line-height: 1.1;
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+    color: #797d7b;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    float: left;
+    min-height: 1px;
+    margin-left: 25px;
+    width: 170px;
+  }
+  .span2 h6{
+    margin-left: 34px;
+  }
+  .categories{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-text-size-adjust: 100%;
+    color-scheme: light;
+    line-height: 1.1;
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+    color: #797d7b;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  .links{
+    list-style: none;
+  }
+  .links li a , .links a , .google-term a{
+    font-size: larger;
+    color: #797d7b;
+    text-decoration: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .links li a:hover, .links a:hover{
+    color: #333;
+    text-decoration: underline;
+  }
+  .span4{
+    padding-left: 100px;
+  }
+  .input-append{
+    display: flex;
+    width: 100%;
+  }
+  .input-append .span3{
+    flex: 2.1;
+  }
+  .input-append button{
+    background-color: red;
+    color: white;
+    font-weight: 500;
+  }
+  .google-term a{
+    color:red;
+    text-decoration: underline;
+  }
+  .google-term a:hover{
+    color:black;
+  }
+  .social ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0px;
+  }
+  .credits{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-text-size-adjust: 100%;
+    color-scheme: light;
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    box-sizing: inherit;
+    background-color: #474948;
+    padding: 10px 0;
+    color: gainsboro;
+    font-size: 14px;
+    line-height: 18px;
+    height: 50px;
+  }
+  .span8{
+    display: flex;
+    justify-content: center;
+  }
+  .span8 a{
+    color: lightgray;
+    font-size: 14px;
+  }
+  .span8 a:hover{
+    text-decoration: none !important;
+    color: white !important;
+  }
+  .span8 p{
+    margin-top: 15px;
+  }
