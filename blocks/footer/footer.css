@@ -259,7 +259,7 @@ footer .wrapper .section.site-links .default-content-wrapper ol li:first-of-type
     background-color: #474948;
     padding: 10px 0;
     color: gainsboro;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 18px;
   }
   .span8{
@@ -268,7 +268,7 @@ footer .wrapper .section.site-links .default-content-wrapper ol li:first-of-type
   }
   .span8 a{
     color: lightgray;
-    font-size: small;
+    font-size: 14px;
   }
   .span8 a:hover{
     text-decoration: none !important;
