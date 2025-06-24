@@ -573,7 +573,7 @@ main .default-content-wrapper img {
 .columns.block p:not(:has(:is(a.button , picture))),
 main .default-content-wrapper p:not(:has(:is(a.button , picture))) {
   color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: #f6f6f6;
   border: var(--text-border);
   border-radius: var(--text-border-radius);
   box-shadow: var(--text-box-shadow);

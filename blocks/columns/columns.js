@@ -15,4 +15,8 @@ export default function decorate(block) {
       }
     });
   });
+  //adding classname to columns inside columns block
+  block.querySelectorAll('div').forEach((child, index) => {
+    child.classList.add('individual-card');
+  });
 }
