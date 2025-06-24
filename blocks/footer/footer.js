@@ -23,6 +23,7 @@ export default async function decorate(block) {
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
   // block.append(footer);
+  //custom footer
   const footer_element = document.createElement('div');
   footer_element.classList.add('custom-footer');
   footer_element.innerHTML = `<div class="custom-footer-wrapper">
@@ -325,5 +326,22 @@ export default async function decorate(block) {
         </div>-->
     </div>
 </div>`
+//custom footer end
+const credits = document.createElement('div');
+credits.innerHTML=`<div class="credits">
+    <div class="container">
+        <div class="row">
+            <div class="span8">
+                <p>© 2025 <a href="#" title="Emirates Official Store">Emirates Official Store </a>· <a href="/Condition_of_use" title="Terms &amp; Conditions" data-id="footer_internallink" data-link="Terms &amp; Conditions">Terms &amp; Conditions</a> · <a href="/Privacypolicy" title="Privacy policy" data-id="footer_internallink" data-link="Privacy policy">Privacy policy</a> · All Rights Reserved. </p>
+
+            </div>
+            <div class="span4 text-right hidden-phone">
+                <p></p>
+            </div>
+
+        </div>
+    </div>
+</div>`
 block.append(footer_element);
+block.append(credits);
 }

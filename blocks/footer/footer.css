@@ -248,3 +248,17 @@ footer .wrapper .section.site-links .default-content-wrapper ol li:first-of-type
     gap: 10px;
     padding: 0px;
   }
+  .credits{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-text-size-adjust: 100%;
+    color-scheme: light;
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    box-sizing: inherit;
+    background-color: #474948;
+    padding: 10px 0;
+    color: #939694;
+    font-size: 12px;
+    line-height: 18px;
+  }
