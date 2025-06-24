@@ -250,7 +250,7 @@ main .block {
 } */
 
 main {
-  margin-top: 170px;
+  /* margin-top: 170px; */
   flex: 1;
 }
 
