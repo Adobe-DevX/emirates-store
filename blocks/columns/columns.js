@@ -26,7 +26,7 @@ export default function decorate(block) {
   });
   document.querySelectorAll('.individual-card div').forEach(card => {
     if (card.innerHTML.trim() === '') {
-      card.remove();
+      div.style.display = 'none';
     }
   });
 }
