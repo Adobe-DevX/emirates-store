@@ -8,12 +8,22 @@
   margin: 0;
   padding: 0;
 }
+.carousel .carousel-slide .carousel-slide-content a:any-link.button {
+  background: red;
+  color: white;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.carousel .carousel-slide .carousel-slide-content a:any-link.button:hover{
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
 
 .carousel .carousel-slides {
   display: flex;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  overflow: hidden clip;
+  overflow: scroll clip;
 }
 
 .carousel .carousel-slides::-webkit-scrollbar {
@@ -29,7 +39,7 @@
   justify-content: center;
   position: relative;
   width: 100%;
-  min-height: min(40rem, calc(100svh - var(--nav-height)));
+  min-height: min(50vw, calc(100dvh - var(--header-height)));
 }
 
 .carousel .carousel-slide:has(.carousel-slide-content[data-align='center']) {
@@ -43,206 +53,118 @@
 .carousel .carousel-slide .carousel-slide-image picture {
   position: absolute;
   inset: 0;
-  z-index: 1;
 }
 
 .carousel .carousel-slide .carousel-slide-image picture > img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: var(--border-radius);
-}
-
-.carousel .carousel-slide .carousel-slide-content a:any-link.button {
-  background: red;
-  color: white;
-  border-radius: 3px;
-}
-.carousel .carousel-slide .carousel-slide-content a:any-link.button:hover{
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  text-decoration: none;
-}
-
-.carousel .carousel-slide.bg-light .carousel-slide-content a:any-link.button {
-  background: var(--primary-color);
-  color: var(--secondary-color);
-}
-
-.carousel .carousel-slide.bg-light .carousel-slide-content {
-  background-color: rgba(255 255 255 / 90%);
-  color: #000;
-}
-
-.carousel .carousel-slide.align-right .carousel-slide-content {
-  margin-left: auto;
-}
-
-.carousel .carousel-slide.align-center .carousel-slide-content {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.carousel:has(li[aria-hidden='false'].bg-light) .carousel-slide-indicator {
-  background-color: rgb(255 255 255 / 60%);
-}
-
-.carousel:has(li[aria-hidden='false'].bg-light) .carousel-slide-indicator button {
-  background-color: #fff;
-}
-
-.carousel .carousel-slide .carousel-slide-content,
-.carousel .carousel-slide .carousel-slide-content a:any-link {
-  color: white;
+  border-radius: 18px;
 }
 
 .carousel .carousel-slide .carousel-slide-content {
   z-index: 1;
-  padding: 1rem;
-  margin: 1.5rem 3rem;
-  /* background-color: rgba(0 0 0 / 50%); */
+  margin: 68px;
+  padding: 16px;
+  color: white;
+  /* background-color: rgb(19 19 19 / 75%); */
   position: relative;
   width: var(--slide-content-width, auto);
-  border-radius: var(--border-radius);
 }
 
 .carousel .carousel-slide-indicators {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem;
-  width: 100%;
-}
-
-.carousel .carousel-slide-indicator {
-  width: 1.3rem;
-  height: 1.3rem;
-  background-color: whitesmoke;
-  display: flex;
-  border-radius: 1rem;
-}
-.carousel .carousel-slide-indicator:hover{
-  background-color: grey;
+  gap: 6px 12px;
+  padding: 12px;
+  background-color: var(--light-color);
+  line-height: 0;
 }
 
 .carousel .carousel-slide-indicator button {
-  max-width: 100%;
+  width: 24px;
+  height: 24px;
+  margin: 0;
   padding: 0;
-  border-radius: 1rem;
-  height: 100%;
-  background-color: rgba(0 0 0 / 80%);
+  border-radius: 50%;
+  background-color: #dadada;
+  transition: background-color 0.2s;
 }
 
 .carousel .carousel-slide-indicator button:disabled,
 .carousel .carousel-slide-indicator button:hover,
 .carousel .carousel-slide-indicator button:focus-visible {
-  background-color: rgba(0 0 0 / 80%);
-}
-
-.carousel .carousel-slide-indicator span,
-.carousel .carousel-navigation-buttons span {
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap;
+  background-color: var(--text-color);
 }
 
 .carousel .carousel-navigation-buttons {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 0.5rem;
-  right: 0.5rem;
+  left: 12px;
+  right: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 2;
-}
-
-.carousel .carousel-slide-indicator {
-  cursor: pointer;
+  z-index: 1;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
 .carousel .carousel-navigation-buttons button {
-  border-radius: 8px;
-  margin: 0;
-  padding: 0;
-  width: 2rem;
-  height: 2rem;
   position: relative;
-  background-color: rgba(0 0 0 / 25%);
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  border-radius: 50%;
+  padding: 0;
+  background-color: rgb(19 19 19 / 25%);
+  transition: background-color 0.2s;
 }
 
 .carousel .carousel-navigation-buttons button:hover,
 .carousel .carousel-navigation-buttons button:focus-visible {
-  background-color: rgba(0 0 0 / 80%);
-}
-
-nav:has(.carousel-slide-indicators) {
-  position: absolute;
-  z-index: 3;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: -20px;
+  background-color: rgb(19 19 19 / 75%);
 }
 
 .carousel .carousel-navigation-buttons button::after {
   display: block;
   content: '';
-  border: 3px white solid;
+  border: 2px solid;
   border-bottom: 0;
   border-left: 0;
-  height: 0.75rem;
-  width: 0.75rem;
+  height: 12px;
+  width: 12px;
   position: absolute;
   top: 50%;
-  left: calc(50% + 3px);
+  left: calc(50% + 2px);
   transform: translate(-50%, -50%) rotate(-135deg);
 }
 
 .carousel .carousel-navigation-buttons button.slide-next::after {
   transform: translate(-50%, -50%) rotate(45deg);
-  left: calc(50% - 3px);
+  left: calc(50% - 2px);
 }
 
 @media (width >= 600px) {
   .carousel .carousel-navigation-buttons {
-    left: 1rem;
-    right: 1rem;
-  }
-
-  .carousel .carousel-navigation-buttons button {
-    width: 3rem;
-    height: 3rem;
-  }
-
-  .carousel .carousel-navigation-buttons button::after {
-    width: 1rem;
-    height: 1rem;
+    left: 24px;
+    right: 24px;
   }
 
   .carousel .carousel-slide .carousel-slide-content {
     --slide-content-width: 50%;
-
-    margin: 2.5rem 5rem;
+    margin-left: 2.5rem 5rem;
     margin-left: 22rem;
   }
 
   .carousel .carousel-slide .carousel-slide-content[data-align='justify'] {
     --slide-content-width: auto;
   }
-  #carousel-1 > nav > ol{
-    gap: 1.5rem;
-  }
-  .carousel-slide-content > p:nth-child(1){
+  .carousel-slide-content > h2 > strong{
     font-family: -webkit-body;
     font-size: xxx-large;
-    font-weight: 500;
+    font-weight: 500 !important;
     line-height: 1.0;
     margin-bottom: 40px;
   }
