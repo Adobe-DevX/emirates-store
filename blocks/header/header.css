@@ -603,7 +603,7 @@ header .header > .default-content-wrapper p:last-of-type img {
     margin-bottom: 74em;
     padding-bottom: 10px;
 }
-header nav .custom-login .default-content-wrapper a:hover{
+header nav .custom-login .default-content-wrapper a:hover , .section .default-content-wrapper .button-container a:hover{
   text-decoration: none;
   color:dimgrey;
 }
@@ -674,7 +674,7 @@ header .header-nav-wrapper{
 header nav .nav-sections .default-content-wrapper > ul > li:hover{
   color:dimgrey;
 }
-.section.brand-logo.nav-brand > div > p > picture > img{
+.section.brand-logo.nav-brand > div > p > picture > img , header nav .nav-brand img{
   z-index: 10;
   position: relative;
   top: 7rem;

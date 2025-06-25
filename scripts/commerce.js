@@ -271,30 +271,31 @@ export async function trackHistory() {
     return;
   }
   // Store product view history in session storage
-  const storeViewCode = await getConfigValue('commerce-store-view-code');
-  window.adobeDataLayer.push((dl) => {
-    dl.addEventListener('adobeDataLayer:change', (event) => {
-      if (!event.productContext) {
-        return;
-      }
-      const key = `${storeViewCode}:productViewHistory`;
-      let viewHistory = JSON.parse(window.localStorage.getItem(key) || '[]');
-      viewHistory = viewHistory.filter((item) => item.sku !== event.productContext.sku);
-      viewHistory.push({ date: new Date().toISOString(), sku: event.productContext.sku });
-      window.localStorage.setItem(key, JSON.stringify(viewHistory.slice(-10)));
-    }, { path: 'productContext' });
-    dl.addEventListener('place-order', () => {
-      const shoppingCartContext = dl.getState('shoppingCartContext');
-      if (!shoppingCartContext) {
-        return;
-      }
-      const key = `${storeViewCode}:purchaseHistory`;
-      const purchasedProducts = shoppingCartContext.items.map((item) => item.product.sku);
-      const purchaseHistory = JSON.parse(window.localStorage.getItem(key) || '[]');
-      purchaseHistory.push({ date: new Date().toISOString(), items: purchasedProducts });
-      window.localStorage.setItem(key, JSON.stringify(purchaseHistory.slice(-5)));
-    });
-  });
+  //commented out as it's not needed
+  // const storeViewCode = await getConfigValue('commerce-store-view-code');
+  // window.adobeDataLayer.push((dl) => {
+  //   dl.addEventListener('adobeDataLayer:change', (event) => {
+  //     if (!event.productContext) {
+  //       return;
+  //     }
+  //     const key = `${storeViewCode}:productViewHistory`;
+  //     let viewHistory = JSON.parse(window.localStorage.getItem(key) || '[]');
+  //     viewHistory = viewHistory.filter((item) => item.sku !== event.productContext.sku);
+  //     viewHistory.push({ date: new Date().toISOString(), sku: event.productContext.sku });
+  //     window.localStorage.setItem(key, JSON.stringify(viewHistory.slice(-10)));
+  //   }, { path: 'productContext' });
+  //   dl.addEventListener('place-order', () => {
+  //     const shoppingCartContext = dl.getState('shoppingCartContext');
+  //     if (!shoppingCartContext) {
+  //       return;
+  //     }
+  //     const key = `${storeViewCode}:purchaseHistory`;
+  //     const purchasedProducts = shoppingCartContext.items.map((item) => item.product.sku);
+  //     const purchaseHistory = JSON.parse(window.localStorage.getItem(key) || '[]');
+  //     purchaseHistory.push({ date: new Date().toISOString(), items: purchasedProducts });
+  //     window.localStorage.setItem(key, JSON.stringify(purchaseHistory.slice(-5)));
+  //   });
+  // });
 }
 
 export function setJsonLd(data, name) {

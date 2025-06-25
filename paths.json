@@ -4,8 +4,6 @@
       "/content/emirates-store/configuration:/.helix/config.json",
       "/content/emirates-store/metadata:/metadata.json",
       "/content/emirates-store/configs:/configs.json",
-      "/content/emirates-store/configs-stage:/configs-stage.json",
-      "/content/emirates-store/configs-dev:/configs-dev.json",
       "/content/emirates-store/redirects:/redirects.json",
       "/content/emirates-store/placeholders:/placeholders.json",
       "/content/emirates-store/products/recommended-products:/products/recommended-products.json",

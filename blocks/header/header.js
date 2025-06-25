@@ -299,7 +299,7 @@ for (let node of Array.from(block.childNodes)) {
   block.firstElementChild.classList.add('marquee');
   block.querySelector('.marquee div').innerHTML= `<marquee>29 May 2 PM  to 24 June – During this period, you will not be able to earn Skywards Miles on online purchases as Emirates Skywards is currently undergoing systems enhancements. However, you can still use your Skywards Miles to make online purchases. We apologise for any inconvenience this may cause.</marquee>`
   //custom login button
-  const customLogin = navWrapper.querySelector('.custom-login .default-content-wrapper a');
+  const customLogin = navWrapper.querySelector('.section .default-content-wrapper .button-container a');
   // Create and inject modal HTML
   const modalHTML = `
     <div id="skywardsModal" class="skywards-modal">
