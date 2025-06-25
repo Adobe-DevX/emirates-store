@@ -7,7 +7,7 @@
 
 # Use the following for Doc-based authoring. Make sure to change it to your SharePoint or Google Drive url.
 mountpoints:
-/: https://adobe.sharepoint.com/:f:/r/sites/NespressoDemo/Shared%20Documents/store?csf=1&web=1&e=uWg0un
+/: https://adobe.sharepoint.com/:f:/r/sites/NespressoDemo/Shared%20Documents/store
 
 folders:
   /products/: /products/default
