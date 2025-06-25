@@ -250,7 +250,7 @@ main .block {
 } */
 
 main {
-  margin-top: 170px;
+  /* margin-top: 170px; */
   flex: 1;
 }
 
@@ -573,7 +573,7 @@ main .default-content-wrapper img {
 .columns.block p:not(:has(:is(a.button , picture))),
 main .default-content-wrapper p:not(:has(:is(a.button , picture))) {
   color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: #f6f6f6;
   border: var(--text-border);
   border-radius: var(--text-border-radius);
   box-shadow: var(--text-box-shadow);
@@ -909,4 +909,7 @@ main .section.author .content-wrapper p:nth-child(2) {
 /* Hide minicart SKU */
 .dropin-design .dropin-cart-item__sku {
   display: none;
+}
+main .section.carousel-container{
+  background-color: #f6f6f6;
 }

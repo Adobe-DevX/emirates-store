@@ -287,6 +287,57 @@ export default async function decorate(block) {
   block.prepend(topNav);
   block.append(navWrapper);
 
+  //remove unnecessary text nodes
+  // Check and remove text nodes that are only whitespace or 'null'
+for (let node of Array.from(block.childNodes)) {
+  if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() === 'null') {
+    block.removeChild(node);
+  }
+}
+
+  //adding marqueeee
+  block.firstElementChild.classList.add('marquee');
+  block.querySelector('.marquee div').innerHTML= `<marquee>29 May 2 PM  to 24 June – During this period, you will not be able to earn Skywards Miles on online purchases as Emirates Skywards is currently undergoing systems enhancements. However, you can still use your Skywards Miles to make online purchases. We apologise for any inconvenience this may cause.</marquee>`
+  //custom login button
+  const customLogin = navWrapper.querySelector('.custom-login .default-content-wrapper a');
+  // Create and inject modal HTML
+  const modalHTML = `
+    <div id="skywardsModal" class="skywards-modal">
+      <div class="skywards-modal-content">
+        <span class="skywards-close">&times;</span>
+        <h2>Log in to Emirates Skywards</h2>
+        <p>Log in to earn or spend Skywards Miles on your shopping at the Emirates Official Store.</p>
+        <button class="skywards-btn login-btn">LOG IN</button>
+        <div class="join-now-section">
+          <p>Not a member? It's free to join</p>
+          <button class="skywards-btn join-btn">JOIN NOW</button>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Append to body
+  document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+  const modal = document.getElementById("skywardsModal");
+  const closeBtn = modal.querySelector(".skywards-close");
+
+  customLogin.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal.style.display = "block";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+
   addAnimation();
   setActiveTab();
 }
