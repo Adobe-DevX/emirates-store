@@ -255,6 +255,97 @@ export default async function decorate(block) {
     toggleSearch();
   });
 
+  /** Language Switcher */
+  const languages = [
+    { code: 'en', name: 'English', flag: '🇺🇸' },
+    { code: 'de', name: 'Deutsch', flag: '🇩🇪' }
+  ];
+
+  // Get current language from URL path
+  function getCurrentLanguage() {
+    const path = window.location.pathname;
+    const match = path.match(/\/us\/([a-z]{2})/);
+    return match ? match[1] : 'en'; // default to English
+  }
+
+  // Switch language by updating URL
+  function switchLanguage(langCode) {
+    const currentPath = window.location.pathname;
+    const currentLang = getCurrentLanguage();
+    
+    // Replace current language code with new one, or add if none exists
+    let newPath;
+    if (currentPath.includes('/us/')) {
+      newPath = currentPath.replace(`/us/${currentLang}`, `/us/${langCode}`);
+    } else {
+      // If no language in path, add it after the first slash
+      newPath = currentPath.replace(/^\/([^/]*)/, `/$1/us/${langCode}`);
+    }
+    
+    // Preserve query parameters
+    const url = new URL(window.location.href);
+    url.pathname = newPath;
+    window.location.href = url.toString();
+  }
+
+  const languageSwitcher = document.createRange().createContextualFragment(`
+    <div class="language-switcher-wrapper">
+      <button type="button" class="nav-language-button" aria-label="Language">
+        <span class="language-flag">🇺🇸</span>
+        <span class="language-code">EN</span>
+        <span class="language-arrow">▼</span>
+      </button>
+      <div class="nav-language-panel nav-panel">
+        <ul class="language-list">
+          ${languages.map(lang => `
+            <li class="language-option" data-lang="${lang.code}">
+              <button type="button" class="language-option-btn">
+                <span class="language-flag">${lang.flag}</span>
+                <span class="language-name">${lang.name}</span>
+              </button>
+            </li>
+          `).join('')}
+        </ul>
+      </div>
+    </div>
+  `);
+
+  navTools.append(languageSwitcher);
+
+  const languagePanel = navTools.querySelector('.nav-language-panel');
+  const languageButton = navTools.querySelector('.nav-language-button');
+  const languageFlag = languageButton.querySelector('.language-flag');
+  const languageCode = languageButton.querySelector('.language-code');
+
+  // Set initial language display
+  function updateLanguageDisplay() {
+    const currentLang = getCurrentLanguage();
+    const langData = languages.find(lang => lang.code === currentLang) || languages[0];
+    languageFlag.textContent = langData.flag;
+    languageCode.textContent = langData.code.toUpperCase();
+  }
+
+  updateLanguageDisplay();
+
+  function toggleLanguagePanel(state) {
+    const show = state ?? !languagePanel.classList.contains('nav-panel--show');
+    languagePanel.classList.toggle('nav-panel--show', show);
+  }
+
+  languageButton.addEventListener('click', () => toggleLanguagePanel());
+
+  // Handle language selection
+  languagePanel.addEventListener('click', (e) => {
+    const languageOption = e.target.closest('.language-option');
+    if (languageOption) {
+      const langCode = languageOption.dataset.lang;
+      if (langCode !== getCurrentLanguage()) {
+        switchLanguage(langCode);
+      }
+      toggleLanguagePanel(false);
+    }
+  });
+
   // Close panels when clicking outside
   document.addEventListener('click', (e) => {
     if (!minicartPanel.contains(e.target) && !cartButton.contains(e.target)) {
@@ -263,6 +354,10 @@ export default async function decorate(block) {
 
     if (!searchPanel.contains(e.target) && !searchButton.contains(e.target)) {
       toggleSearch(false);
+    }
+
+    if (!languagePanel.contains(e.target) && !languageButton.contains(e.target)) {
+      toggleLanguagePanel(false);
     }
   });
 
