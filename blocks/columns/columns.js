@@ -29,4 +29,7 @@ export default function decorate(block) {
       card.style.boxShadow = 'none';
     }
   });
+  document.querySelectorAll('.individual-card img').forEach(card => {
+    card.removeAttribute('loading');
+  });
 }
