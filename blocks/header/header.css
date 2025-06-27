@@ -844,6 +844,11 @@ header nav .nav-tools .language-name {
   }
   
   header nav .nav-tools .language-arrow {
-    display: none;
+    /* display: none; */
+  }
+  .language-switcher-wrapper{
+    width: 52px;
+    color: white;
+    margin-top: 15px;
   }
 }

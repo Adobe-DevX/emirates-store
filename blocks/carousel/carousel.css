@@ -262,7 +262,7 @@ nav:has(.carousel-slide-indicators) {
   .carousel-slide-content .button-container > a:any-link.button{
     display: flex !important;
     width: 63px !important;
-    height: 22px !important;
+    height: 35px !important;
     font-size: 11px !important;
   }
 }
