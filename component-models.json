@@ -787,7 +787,7 @@
         "valueType": "string",
         "name": "media_cont",
         "label": "Background Image Or Video",
-        "multi": false
+        "multi": true
       },
       {
         "component": "text",
@@ -795,20 +795,6 @@
         "name": "media_contAlt",
         "value": "",
         "label": "Bacgkround Alt"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "media_cont",
-        "label": "Background Image Or Video (Mobile)",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "media_contAlt",
-        "value": "",
-        "label": "Bacgkround Alt (Mobile)"
       },
       {
         "component": "richtext",
