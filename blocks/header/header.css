@@ -680,3 +680,10 @@ header nav .nav-sections .default-content-wrapper > ul > li:hover{
   top: 7rem;
 }
 }
+@media (max-width: 700px) {
+  header nav .nav-brand img{
+    margin-top: -36px;
+    height: 163px;
+    position: absolute;
+  }
+}
