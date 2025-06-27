@@ -787,7 +787,7 @@
         "valueType": "string",
         "name": "media_cont",
         "label": "Background Image Or Video",
-        "multi": true
+        "multi": false
       },
       {
         "component": "text",
