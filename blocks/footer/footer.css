@@ -221,7 +221,7 @@ footer .wrapper .section.site-links .default-content-wrapper ol li:first-of-type
     text-decoration: underline;
   }
   .span4{
-    padding-left: 100px;
+    padding-left: 48px;
   }
   .input-append{
     display: flex;
@@ -277,4 +277,23 @@ footer .wrapper .section.site-links .default-content-wrapper ol li:first-of-type
   }
   .span8 p{
     margin-top: 15px;
+  }
+  @media (max-width: 699px) {
+    .skywards-modal {
+      display: none;
+    }
+    .row{
+      display: flex;
+      flex-direction: column;
+      margin-left: 30px !important;
+
+    }
+    .span4{
+      display: flex;
+      flex-direction: column;
+      width: 250px;
+    }
+    .custom-footer-wrapper > div > div > div:nth-child(1){
+      margin-left: 0px;
+    }
   }

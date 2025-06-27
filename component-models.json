@@ -797,6 +797,13 @@
         "label": "Bacgkround Alt"
       },
       {
+        "component": "reference",
+        "valueType": "string",
+        "name": "media_cont_mobile",
+        "label": "Mobile Background Image Or Video",
+        "multi": false
+      },
+      {
         "component": "richtext",
         "name": "content_text",
         "value": "",
