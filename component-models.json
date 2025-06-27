@@ -799,14 +799,14 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "media_cont_mobile",
+        "name": "media_cont",
         "label": "Background Image Or Video (Mobile)",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "media_cont_mobileAlt",
+        "name": "media_contAlt",
         "value": "",
         "label": "Bacgkround Alt (Mobile)"
       },
